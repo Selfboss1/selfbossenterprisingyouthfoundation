@@ -23,7 +23,7 @@ export default function TopBar() {
             className="flex items-center gap-2 transition hover:text-selfboss-yellow"
           >
             <Mail size={13} />
-            selfbossbiz@gmail.com
+            info@selfbossyouthfoundation.com
           </a>
         </div>
       </div>

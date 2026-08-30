@@ -75,14 +75,15 @@ export default function Footer() {
 
             <div className="mt-5 space-y-4 text-sm text-white/50">
               <a
-                href="mailto:selfbossbiz@gmail.com"
-                className="flex gap-3 hover:text-white"
-              >
-                <Mail
-                  size={17}
-                  className="mt-0.5 shrink-0"
-                />
-                selfbossbiz@gmail.com
+                  href="mailto:info@selfbossyouthfoundation.com?subject=Enquiry%20to%20SelfBoss%20Enterprising%20Youth%20Foundation"
+                  aria-label="Email SelfBoss Enterprising Youth Foundation"
+                  className="flex gap-3 hover:text-white"
+                >
+                  <Mail
+                    size={17}
+                    className="mt-0.5 shrink-0"
+                  />
+                  info@selfbossyouthfoundation.com
               </a>
 
               <a

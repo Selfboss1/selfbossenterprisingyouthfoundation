@@ -367,7 +367,7 @@ export default function PartnerPage() {
 
               <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <a
-                  href="mailto:Selfbossbiz@gmail.com?subject=Partnership%20Enquiry"
+                  href="mailto:info@selfbossyouthfoundation.com?subject=Partnership%20Enquiry"
                   className="btn-yellow"
                 >
                   Start A Conversation

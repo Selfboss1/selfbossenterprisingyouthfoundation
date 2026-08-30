@@ -324,12 +324,12 @@ export default function VolunteerPage() {
                   </p>
 
                   <p className="mt-2 text-lg font-black">
-                    Selfbossbiz@gmail.com
+                    
                   </p>
                 </div>
 
                 <a
-                  href="mailto:Selfbossbiz@gmail.com?subject=Volunteer%20Enquiry"
+                  href="mailto:info@selfbossyouthfoundation.com?subject=Volunteer%20Enquiry"
                   className="btn-yellow"
                 >
                   Email Us

@@ -68,7 +68,7 @@ export default function MobileMenu({
             </a>
 
             <a
-              href="mailto:selfbossbiz@gmail.com"
+              href="mailto:info@selfbossyouthfoundation.com"
               className="rounded-2xl border border-black/10 p-4 text-center text-xs font-black"
             >
               Email Us
