@@ -1,26 +1,241 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================================
+   SELFBOSS FOUNDATION — GLOBAL DESIGN SYSTEM
+   ========================================================= */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --selfboss-yellow: #facc15;
+  --selfboss-yellow-dark: #eab308;
+  --selfboss-black: #050505;
+  --selfboss-charcoal: #111111;
+  --selfboss-white: #ffffff;
+  --selfboss-soft: #f8f8f6;
+  --selfboss-gray: #6b7280;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  min-width: 320px;
+  background: var(--selfboss-white);
+  color: var(--selfboss-black);
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+::selection {
+  background: var(--selfboss-yellow);
+  color: var(--selfboss-black);
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--selfboss-yellow-dark);
+}
+
+/* =========================================================
+   GLOBAL CONTAINER
+   ========================================================= */
+
+@layer components {
+  .section-container {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-28;
+  }
+
+  .section-label {
+    @apply mb-3 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.2em] text-selfboss-yellow;
+  }
+
+  .section-title {
+    @apply text-3xl font-black leading-tight tracking-tight sm:text-4xl lg:text-5xl;
+  }
+
+  .section-description {
+    @apply mx-auto mt-5 max-w-2xl text-base leading-7 text-gray-600 sm:text-lg;
+  }
+
+  /* =======================================================
+     PRIMARY BUTTON
+     ======================================================= */
+
+  .btn-primary {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-selfboss-yellow px-6 py-3 text-sm font-black text-selfboss-black shadow-yellow transition-all duration-300 hover:-translate-y-0.5 hover:bg-selfboss-yellow-dark active:translate-y-0;
+  }
+
+  /* =======================================================
+     BLACK BUTTON
+     ======================================================= */
+
+  .btn-black {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-selfboss-black px-6 py-3 text-sm font-black text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-selfboss-charcoal active:translate-y-0;
+  }
+
+  /* =======================================================
+     OUTLINE BUTTON
+     ======================================================= */
+
+  .btn-outline {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full border-2 border-selfboss-black px-6 py-3 text-sm font-black text-selfboss-black transition-all duration-300 hover:bg-selfboss-black hover:text-white;
+  }
+
+  /* =======================================================
+     BLACK GRID BACKGROUND
+     ======================================================= */
+
+  .grid-dark {
+    background-color: var(--selfboss-black);
+    background-image:
+      linear-gradient(
+        rgba(255, 255, 255, 0.055) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.055) 1px,
+        transparent 1px
+      );
+    background-size: 32px 32px;
+  }
+
+  /* =======================================================
+     YELLOW GRID BACKGROUND
+     ======================================================= */
+
+  .grid-yellow {
+    background-color: var(--selfboss-yellow);
+    background-image:
+      linear-gradient(
+        rgba(0, 0, 0, 0.08) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.08) 1px,
+        transparent 1px
+      );
+    background-size: 32px 32px;
+  }
+
+  /* =======================================================
+     GLASS EFFECT
+     ======================================================= */
+
+  .glass-dark {
+    @apply border border-white/10 bg-black/60 backdrop-blur-xl;
+  }
+
+  /* =======================================================
+     CARD
+     ======================================================= */
+
+  .sb-card {
+    @apply rounded-3xl border border-black/5 bg-white shadow-soft transition-all duration-300;
+  }
+
+  .sb-card:hover {
+    @apply -translate-y-1 shadow-card;
+  }
+}
+
+/* =========================================================
+   FOCUS ACCESSIBILITY
+   ========================================================= */
+
+:focus-visible {
+  outline: 3px solid var(--selfboss-yellow);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================================================
+   MOBILE SAFE AREA
+   ========================================================= */
+
+@supports (padding: env(safe-area-inset-bottom)) {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
 }
