@@ -14,6 +14,7 @@ import FloatingActions from "@/components/layout/FloatingActions";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import TopBar from "@/components/layout/TopBar";
+import UpcomingEvent from "@/components/home/UpcomingEvent";
 
 export default function HomePage() {
   return (
@@ -24,6 +25,8 @@ export default function HomePage() {
 
       <main className="overflow-hidden">
         <Hero />
+
+        <UpcomingEvent />
 
         <ImpactStats />
 
