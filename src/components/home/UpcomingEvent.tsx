@@ -12,15 +12,15 @@ const videos = [
     title: "SelfBoss Music Concert",
   },
   {
-    src: "/videos/concert-1.mp4",
+    src: "/videos/concert-2.mp4",
     title: "Preparing for Music Concert",
   },
   {
-    src: "/videos/concert-1.mp4",
+    src: "/videos/concert-3.mp4",
     title: "Preparations Ongoing",
   },
   {
-    src: "/videos/concert-1.mp4",
+    src: "/videos/concert-4.mp4",
     title: "Behind the Scenes",
   },
 ];
