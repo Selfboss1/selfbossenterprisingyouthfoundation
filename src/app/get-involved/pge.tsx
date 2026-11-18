@@ -554,7 +554,7 @@ export default function GetInvolvedPage() {
                     size={15}
                     className="text-selfboss-yellow"
                   />
-                  Selfbossbiz@gmail.com
+                  no mail
                 </a>
 
                 <a

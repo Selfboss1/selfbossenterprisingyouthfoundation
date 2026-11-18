@@ -83,7 +83,7 @@ export default function Footer() {
                     size={17}
                     className="mt-0.5 shrink-0"
                   />
-                  info@selfbossyouthfoundation.com
+                  no mail
               </a>
 
               <a

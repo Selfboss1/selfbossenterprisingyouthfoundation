@@ -237,7 +237,7 @@ export default function ContactPage() {
                     </a>
 
                     <a
-                      href="mailto:Selfbossbiz@gmail.com"
+                      href="mailto:nomail"
                       className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:border-selfboss-yellow/30 hover:bg-white/10"
                     >
                       <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-selfboss-yellow text-black">
@@ -250,7 +250,7 @@ export default function ContactPage() {
                         </p>
 
                         <p className="mt-1 break-all text-sm font-bold">
-                          Selfbossbiz@gmail.com
+                          no mail
                         </p>
                       </div>
                     </a>
@@ -309,7 +309,7 @@ export default function ContactPage() {
 
                   <div className="mt-7 grid gap-3 sm:grid-cols-2">
                     <a
-                      href="mailto:Selfbossbiz@gmail.com"
+                      href="#"
                       className="btn-black w-full"
                     >
                       <Mail size={15} />

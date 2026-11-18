@@ -2,7 +2,7 @@
 
 import { Mail, Phone } from "lucide-react";
 
-const EMAIL = "info@selfbossyouthfoundation.com";
+const EMAIL = "#";
 const PHONE = "+2347043202431";
 
 export default function FloatingActions() {
